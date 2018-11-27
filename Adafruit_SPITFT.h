@@ -20,6 +20,9 @@
   typedef volatile uint32 RwReg;
   #undef USE_FAST_PINIO
   typedef class HardwareSPI SPIClass;
+#elif defined(CONFIG_BOARD_SPRESENSE)
+  typedef volatile uint32_t RwReg;
+  #undef USE_FAST_PINIO
 #elif defined(__OPENCR__) || defined (__OPENCM904__)
   #undef USE_FAST_PINIO
 #elif defined(ARDUINO_FEATHER52) || defined(__arm__)
